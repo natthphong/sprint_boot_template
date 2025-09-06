@@ -1,0 +1,37 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /template
+logging:
+  level:
+    org.springframework: TRACE
+spring:
+  cache:
+    type: jcache
+    jcache:
+      provider: org.ehcache.jsr107.EhcacheCachingProvider
+      config: classpath:ehcache.xml
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: username
+    password: password
+    url: jdbc:postgresql://localhost:5432/template
+    name: org.postgresql.Driver
+  jpa:
+    show-sql: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  profiles:
+    active:
+      - local
+  application:
+    name: template-application
+  main:
+    allow-circular-references: true
+app:
+  application-name: template-application
+  tokens:
+    jwt-secret: jwt-secretjwt-secretjwt-secret
+    refresh-token:
+      expired: 120
+    access-token:
+      expired: 60

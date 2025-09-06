@@ -1,0 +1,14 @@
+
+
+DEFAULT_READ_TIMEOUT: "5000"
+DEFAULT_CONNECT_TIMEOUT: "5000"
+
+TEMPLATE_BASEURL: "http://localhost:8099"
+REDIS_HOST: "localhost"
+REDIS_PORT: "6379"
+REDIS_AUTH: ""
+cache.config: "{\"name\":\"config\",\"db\":\"0\",\"ttl\":\"24\"}"
+
+
+
+
